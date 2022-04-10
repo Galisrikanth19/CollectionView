@@ -10,11 +10,22 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var collcView: UICollectionView!
+    var dataArr:[String] = [String]() {
+        didSet {
+            self.collcView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataArr = ["Srikanth", "Saanvi", "Sagarika", "RaviShekar", "Sujatha", "Bairaiah"]
         setupCollcView()
     }
+    
+}
+
+// MARK: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private func setupCollcView() {
         collcView.backgroundColor = .clear
@@ -31,16 +42,12 @@ class ViewController: UIViewController {
         }
     }
     
-}
-
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return dataArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let customCollcCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollcCell", for: indexPath) as! CustomCollcCell
+        let customCollcCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollcCell.identifier, for: indexPath) as! CustomCollcCell
         customCollcCell.configureCollcCell(WithWidthConstraint: self.view.bounds.width/2 - 10, WithHeightConstraint: self.view.bounds.width/2 - 10)
         return customCollcCell
     }

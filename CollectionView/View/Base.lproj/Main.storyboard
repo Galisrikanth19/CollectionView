@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -62,8 +63,8 @@
                                         <size key="customSize" width="195" height="181"/>
                                         <connections>
                                             <outlet property="bgView" destination="Tjr-Hz-1b8" id="DuI-EX-LuL"/>
-                                            <outlet property="bgViewHeightConstraint" destination="LGr-4d-CkW" id="GRt-Eb-hh3"/>
-                                            <outlet property="bgViewWidthConstraint" destination="X8Y-3s-Wd8" id="7hm-4x-E3X"/>
+                                            <outlet property="heightConstraintbgView" destination="LGr-4d-CkW" id="xcX-yZ-P3x"/>
+                                            <outlet property="widthConstraintBgView" destination="X8Y-3s-Wd8" id="CeG-vI-zc1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
