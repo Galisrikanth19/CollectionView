@@ -47,9 +47,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let customCollcCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollcCell.identifier, for: indexPath) as! CustomCollcCell
-        customCollcCell.configureCollcCell(WithWidthConstraint: self.view.bounds.width/2 - 10, WithHeightConstraint: self.view.bounds.width/2 - 10)
-        return customCollcCell
+        let collcCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollcCell.identifier, for: indexPath) as! CustomCollcCell
+        collcCell.configureCollcCell(WithWidthConstraint: self.collcView.bounds.width, WithHeightConstraint: self.collcView.bounds.height)
+        return collcCell
     }
     
 }
