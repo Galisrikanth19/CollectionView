@@ -4,16 +4,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +22,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Ua-JA-EM7">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJh-8M-Mw6">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJh-8M-Mw6">
                                     <size key="itemSize" width="195" height="181"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -42,7 +43,7 @@
                                                             <rect key="frame" x="5" y="5" width="175" height="161"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.91632292199999998" green="0.77968199819999995" blue="0.60281547619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" name="collcCellBgColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="iLA-IX-csG" secondAttribute="bottom" constant="5" id="De2-9n-U2J"/>
                                                         <constraint firstAttribute="height" constant="171" id="LGr-4d-CkW"/>
@@ -60,7 +61,6 @@
                                                 <constraint firstItem="Tjr-Hz-1b8" firstAttribute="top" secondItem="EaZ-ts-gaJ" secondAttribute="top" constant="5" id="s9d-f5-gXr"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="195" height="181"/>
                                         <connections>
                                             <outlet property="bgView" destination="Tjr-Hz-1b8" id="DuI-EX-LuL"/>
                                             <outlet property="heightConstraintbgView" destination="LGr-4d-CkW" id="xcX-yZ-P3x"/>
@@ -71,7 +71,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.88796134630000001" green="1" blue="0.71175033529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="bgColor"/>
                         <constraints>
                             <constraint firstItem="9Ua-JA-EM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Nx-pG-oN6"/>
                             <constraint firstItem="9Ua-JA-EM7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BUB-Xb-dN2"/>
@@ -90,6 +90,12 @@
     </scenes>
     <resources>
         <image name="pic" width="251" height="201"/>
+        <namedColor name="bgColor">
+            <color red="0.97254901960784312" green="0.92549019607843142" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="collcCellBgColor">
+            <color red="0.67450980392156867" green="0.49019607843137253" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
