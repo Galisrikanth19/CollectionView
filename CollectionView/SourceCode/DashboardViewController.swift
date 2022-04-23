@@ -39,7 +39,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         collcView.backgroundColor = .clear
         collcView.delegate = self
         collcView.dataSource = self
-        self.collcView.setNoDataView(WithErrorStr: "No data found")
+        collcView.setNoDataView(WithErrorStr: "No data found")
         
         collcView.showsHorizontalScrollIndicator = false
         collcView.showsVerticalScrollIndicator = false
