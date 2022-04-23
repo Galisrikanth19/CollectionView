@@ -2,7 +2,7 @@
 //  DashboardViewController.swift
 //  CollectionView
 //
-//  Created by mac on 03/04/22.
+//  Created by Saanvi on 03/04/22.
 //
 
 import UIKit
@@ -22,8 +22,12 @@ class DashboardViewController: UIViewController {
     }
     
     private func setupVC() {
-        dataArr = ["Srikanth", "Saanvi", "Sagarika", "RaviShekar", "Sujatha", "Bairaiah", "Ansh"]
         setupCollcView()
+        updateViewWithData()
+    }
+    
+    private func updateViewWithData() {
+        dataArr = ["Srikanth", "Sagarika", "Saanvi", "RaviShekar", "Sujatha", "Bairaiah"]
     }
     
 }
@@ -35,6 +39,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         collcView.backgroundColor = .clear
         collcView.delegate = self
         collcView.dataSource = self
+        self.collcView.setNoDataView(WithErrorStr: "No data found")
         
         collcView.showsHorizontalScrollIndicator = false
         collcView.showsVerticalScrollIndicator = false
@@ -47,6 +52,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        dataArr.count == 0 ? self.collcView.showNoDataView() : self.collcView.hideNoDataView()
         return dataArr.count
     }
     

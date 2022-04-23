@@ -1,8 +1,8 @@
 //
 //  NSObjectExtension.swift
-//  LearnByResearch
+//  CollectionView
 //
-//  Created by ELORCE INDUSTRIES PRIVATE LIMITED on 12/01/22.
+//  Created by Saanvi on 03/04/22.
 //
 
 import Foundation
