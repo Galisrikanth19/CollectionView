@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Ua-JA-EM7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FJh-8M-Mw6">
                                     <size key="itemSize" width="195" height="181"/>
@@ -40,17 +40,15 @@
                                                     <rect key="frame" x="5" y="5" width="185" height="171"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tom-jerry" translatesAutoresizingMaskIntoConstraints="NO" id="iLA-IX-csG">
-                                                            <rect key="frame" x="5" y="5" width="175" height="161"/>
+                                                            <rect key="frame" x="15" y="15" width="155" height="141"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="collcCellBgColor"/>
+                                                    <color key="backgroundColor" name="CollcCellBgColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="iLA-IX-csG" secondAttribute="bottom" constant="5" id="De2-9n-U2J"/>
-                                                        <constraint firstAttribute="height" constant="171" id="LGr-4d-CkW"/>
-                                                        <constraint firstItem="iLA-IX-csG" firstAttribute="leading" secondItem="Tjr-Hz-1b8" secondAttribute="leading" constant="5" id="V1J-GL-2Ow"/>
-                                                        <constraint firstAttribute="trailing" secondItem="iLA-IX-csG" secondAttribute="trailing" constant="5" id="V71-fB-V13"/>
-                                                        <constraint firstAttribute="width" constant="185" id="X8Y-3s-Wd8"/>
-                                                        <constraint firstItem="iLA-IX-csG" firstAttribute="top" secondItem="Tjr-Hz-1b8" secondAttribute="top" constant="5" id="afD-mX-n1H"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iLA-IX-csG" secondAttribute="bottom" constant="15" id="De2-9n-U2J"/>
+                                                        <constraint firstItem="iLA-IX-csG" firstAttribute="leading" secondItem="Tjr-Hz-1b8" secondAttribute="leading" constant="15" id="V1J-GL-2Ow"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iLA-IX-csG" secondAttribute="trailing" constant="15" id="V71-fB-V13"/>
+                                                        <constraint firstItem="iLA-IX-csG" firstAttribute="top" secondItem="Tjr-Hz-1b8" secondAttribute="top" constant="15" id="afD-mX-n1H"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -63,15 +61,13 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="bgView" destination="Tjr-Hz-1b8" id="DuI-EX-LuL"/>
-                                            <outlet property="heightConstraintbgView" destination="LGr-4d-CkW" id="xcX-yZ-P3x"/>
-                                            <outlet property="widthConstraintBgView" destination="X8Y-3s-Wd8" id="CeG-vI-zc1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="9Ua-JA-EM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Nx-pG-oN6"/>
                             <constraint firstItem="9Ua-JA-EM7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BUB-Xb-dN2"/>
@@ -90,10 +86,10 @@
     </scenes>
     <resources>
         <image name="tom-jerry" width="251" height="201"/>
-        <namedColor name="bgColor">
+        <namedColor name="BgColor">
             <color red="0.97299998998641968" green="0.92500001192092896" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="collcCellBgColor">
+        <namedColor name="CollcCellBgColor">
             <color red="0.67500001192092896" green="0.49000000953674316" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

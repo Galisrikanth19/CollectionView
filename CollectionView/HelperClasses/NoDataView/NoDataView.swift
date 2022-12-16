@@ -8,7 +8,6 @@
 import UIKit
 
 class NoDataView: UIView {
-    
     @IBOutlet weak var errorImgV: UIImageView!
     @IBOutlet weak var errorLbl: UILabel!
     
@@ -29,15 +28,16 @@ class NoDataView: UIView {
     }
     
     func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: NoDataView.identifier, bundle: nil)
+        let nib = UINib(nibName: NoDataView.className, bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    func updateViewWithData(WithErrorImage errImg: String = "no-data", WithErrorStr _errStr: String) {
-        if let _errImg = UIImage.init(named: errImg) {
-            errorImgV.image = _errImg
+    func updateViewWithData(WithErrorImage errImg: String?, WithErrorStr _errStr: String) {
+        errorImgV.isHidden = true
+        if let _errImg = errImg, let _img = UIImage.init(named: _errImg) {
+            errorImgV.image = _img
+            errorImgV.isHidden = false
         }
         errorLbl.text = _errStr
     }
-    
 }

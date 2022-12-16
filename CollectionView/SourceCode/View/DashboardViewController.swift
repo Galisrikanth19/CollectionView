@@ -8,9 +8,8 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-    
     @IBOutlet weak var collcView: UICollectionView!
-    var dataArr:[String] = [String]() {
+    var dataArr:[MockModel] = [MockModel]() {
         didSet {
             self.collcView.reloadData()
         }
@@ -27,14 +26,12 @@ class DashboardViewController: UIViewController {
     }
     
     private func updateViewWithData() {
-        dataArr = ["Srikanth", "Sagarika", "Saanvi", "RaviShekar", "Sujatha", "Bairaiah"]
+        dataArr = MockData.mockMArr
     }
-    
 }
 
 // MARK: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
     private func setupCollcView() {
         collcView.backgroundColor = .clear
         collcView.delegate = self
@@ -46,8 +43,8 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         
         if let layout = collcView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
-            layout.minimumInteritemSpacing = 0;
-            layout.minimumLineSpacing = 0;
+            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 0
         }
     }
     
@@ -57,13 +54,12 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collcCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollcCell.identifier, for: indexPath) as! CustomCollcCell
-        collcCell.configureCollcCell(WithWidthConstraint: self.collcView.bounds.width/2 - 10, WithHeightConstraint: self.collcView.bounds.width/2 - 10)
+        let collcCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollcCell.className, for: indexPath) as! CustomCollcCell
+        collcCell.configureCollcCell()
         return collcCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collcView.bounds.width/2, height: self.collcView.bounds.width/2)
+        return CGSize(width: (self.collcView.bounds.width)/3, height: (self.collcView.bounds.width)/3)
     }
-    
 }
